@@ -164,6 +164,6 @@ MIT License - open-source license.
 
 Disclaimer: This project is for educational demonstration. The Llama 2 model usage is subject to Meta’s license terms and may not be used for commercial purposes without prior permission.
 
-Enjoy exploring the AI-Powered Educational Platform! Feel free to raise issues or contribute via pull requests. If you have any questions, contact: [RoLBester.
+Enjoy exploring the AI-Powered Educational Platform! Feel free to raise issues or contribute via pull requests. If you have any questions, contact: [RoLBester]
 
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
