@@ -1,48 +1,25 @@
 from fastapi import FastAPI
-from pymongo import MongoClient
-from dotenv import load_dotenv
-from importlib import import_module
-from app.cors import add_cors_middleware  # Import the CORS configuration
+from app.cors import add_cors_middleware
+from app.routes.recommendations import router as recommendations_router
+from app.routes.evaluations import router as evaluations_router
+from app.routes.questions import router as questions_router
+from app.routes.sales import router as sales_router
+from app.routes.resources import router as resources_router
+from app.routes.chat import router as chat_router
+from app.routes.performance import router as performance_router  
 
-import os
-
-# Initialize FastAPI application
 app = FastAPI()
-
-# Add CORS middleware
 add_cors_middleware(app)
 
-# Dynamically import and include the sales router
-try:
-    sales_router = import_module("app.routes.sales").router
-    app.include_router(sales_router, prefix="/api/sales", tags=["sales"])
-except ModuleNotFoundError as e:
-    print(f"Error importing sales module: {e}")
-
-# Load environment variables
-load_dotenv()
-uri = os.getenv("MONGO_URI")
-
-# Connect to MongoDB
-try:
-    client = MongoClient(uri)
-    db = client["AdaptiveLearning"]
-    print("Successfully connected to MongoDB!")
-except Exception as e:
-    print(f"Error connecting to MongoDB: {e}")
-    db = None  # Ensure `db` is defined even if the connection fails
-
-# Test MongoDB connection and return a message
 @app.get("/")
 async def root():
-    if db is None:
-        return {"error": "MongoDB connection is not established"}
+    return {"message": "Hello, Adaptive Learning Platform is running!"}
 
-    try:
-        collections = db.list_collection_names()
-        return {
-            "message": "Hello, Adaptive Learning Platform is running!",
-            "collections": collections,
-        }
-    except Exception as e:
-        return {"error": f"Unexpected error: {str(e)}"}
+app.include_router(recommendations_router, prefix="/api", tags=["recommendations"])
+app.include_router(evaluations_router, prefix="/api", tags=["evaluations"])
+app.include_router(questions_router, prefix="/api", tags=["questions"])
+app.include_router(sales_router, prefix="/api", tags=["sales"])
+app.include_router(resources_router, prefix="/api", tags=["resources"])
+app.include_router(chat_router, prefix="/api", tags=["chat"])
+app.include_router(performance_router, prefix="/api", tags=["performance"])  
+
