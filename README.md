@@ -52,33 +52,6 @@ TailwindCSS for responsive design (if applicable)
 VS Code as the primary IDE (with debugging extensions)
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 4. Project Structure
-Below is an example layout:
-
-AI-Edu-Platform/
-├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── db.py
-│   │   ├── routes/
-│   │   │   ├── recommendations.py
-│   │   │   ├── evaluations.py
-│   │   │   ├── questions.py
-│   │   │   ├── chat.py
-│   │   │   └── resources.py
-│   │   ├── models/
-│   │   │   ├── recommendation_engine.py
-│   │   │   ├── learning_model.py
-│   │   │   └── question_model.py
-│   ├── requirements.txt
-│   └── .env
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx
-│   │   ├── components/
-│   │   ├── api/
-│   │   ├── ...
-│   ├── package.json
-├── README.md
 └── ...
 backend/app/main.py – Entry point for the Python backend.
 backend/app/routes/*.py – Contains API endpoints for quiz evaluation, recommendations, chat, etc.
