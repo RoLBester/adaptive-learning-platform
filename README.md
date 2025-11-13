@@ -142,6 +142,19 @@ MIT License - open-source license.
 
 Disclaimer: This project is for educational demonstration. The Llama 2 model usage is subject to Meta’s license terms and may not be used for commercial purposes without prior permission.
 
+
+## My Role & Contributions
+
+This is an individual project that I designed and implemented as a full-stack AI demo. My main responsibilities included:
+
+- Designing the overall architecture (React/TypeScript frontend + Python backend + MongoDB database).
+- Implementing REST API endpoints for quizzes, user progress tracking, and AI-based recommendations.
+- Integrating Meta Llama 2 (7B) via the Hugging Face Inference API for question-answering.
+- Building frontend pages for quizzes, learning-path recommendations, analytics dashboards, and the chat assistant.
+- Handling environment configuration (MongoDB connection, Hugging Face credentials, model configuration).
+- Writing project documentation and setup instructions.
+
+
 Enjoy exploring the AI-Powered Educational Platform! Feel free to raise issues or contribute via pull requests. If you have any questions, contact: [RoLBester]
 
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
