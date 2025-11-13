@@ -1,3 +1,8 @@
+# AI-Powered Educational Platform
+
+> **TL;DR:** A full-stack AI education platform built with React/TypeScript (frontend), Python (FastAPI/Flask) + MongoDB (backend), and Meta Llama 2 (7B via Hugging Face) for question-answering and personalized learning recommendations.
+>
+> This project shows experience with LLM integration, REST APIs, basic data pipelines, and a production-style frontend + backend architecture.
 
 AI-Powered Educational Platform where you can become a student of an AI operated school.
 An adaptive learning system that personalizes educational content, quizzes, and study materials based on user performance. Integrates a Large Language Model (LLM) for question-answering and content recommendations, leveraging Meta’s Llama 2 (7B HF) as the core NLP engine.
