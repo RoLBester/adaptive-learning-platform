@@ -155,6 +155,6 @@ This is an individual project that I designed and implemented as a full-stack AI
 - Writing project documentation and setup instructions.
 
 
-Enjoy exploring the AI-Powered Educational Platform! Feel free to raise issues or contribute via pull requests. If you have any questions, contact: [RoLBester]
+Enjoy exploring the AI-Powered Educational Platform! Feel free to raise issues or contribute via pull requests.
 
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________

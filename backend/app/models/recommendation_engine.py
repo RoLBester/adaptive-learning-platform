@@ -5,11 +5,13 @@ db = get_db()
 
 def recommend_resources_for_user(user_id: str) -> list:
     """
-    Naive logic:
-    1. Find user doc in Users collection.
-    2. Identify topics with progress < 60 => 'weak topics'.
-    3. Query 'Resources' for those topics.
-    4. Return matched resources or fallback.
+    Baseline recommendation algorithm using topic-based matching.
+
+    Algorithm:
+    1. Retrieve user progress from Users collection
+    2. Identify weak topics (progress score < 60)
+    3. Query Resources collection for matching topics
+    4. Return matched resources or fallback message
     """
     user_doc = db.Users.find_one({"user_id": user_id})
     if not user_doc:

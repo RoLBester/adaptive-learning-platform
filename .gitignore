@@ -1,18 +1,103 @@
-# Python cache and virtual environment
+# ==========================================
+# Python Backend
+# ==========================================
+# Virtual environments
 backend/venv/
+backend/.venv/
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache
 backend/app/__pycache__/
 backend/app/routes/__pycache__/
+backend/app/models/__pycache__/
+__pycache__/
+*.py[cod]
+*$py.class
 *.pyc
 *.pyo
 
-# Environment files
+# Environment files (NEVER commit real credentials)
 backend/.env
+.env
 
-# Node.js modules (frontend)
+# Vector database storage
+backend/chroma_db/
+chroma_db/
+
+# Python testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# Node.js Frontend
+# ==========================================
+# Dependencies
 frontend/node_modules/
+node_modules/
+/.pnp
+.pnp.js
 
-# Log files
-*.log
+# Testing
+frontend/coverage/
+/coverage
 
-# Build artifacts
+# Production builds
 frontend/build/
+/build
+
+# Frontend environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==========================================
+# Logs
+# ==========================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# ==========================================
+# Operating System Files
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ==========================================
+# IDE & Editor Files
+# ==========================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# Deployment & CI/CD
+# ==========================================
+*.zip
+*.tar.gz
+.azure/
